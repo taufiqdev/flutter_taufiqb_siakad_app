@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_taufiqb_siakad_app/data/datasources/auth_local_datasource.dart';
 import 'package:flutter_taufiqb_siakad_app/pages/auth/splash_page.dart';
+import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/mahasiswa_page.dart';
 
 import 'bloc/login/login_bloc.dart';
 
@@ -19,10 +21,16 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BlocProvider(
-        create: (context) => LoginBloc(),
-        child: SplashPage(),
-      ),
+      home: FutureBuilder<bool>(
+          future: AuthLocalDatasource().isLogin(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData && snapshot.data!) {
+              //final user= await AuthLocalDatasource().getUser();
+              return MahasiswaPage();
+            } else {
+              return SplashPage();
+            }
+          }),
     );
   }
 }
