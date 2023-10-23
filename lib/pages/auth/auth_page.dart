@@ -54,7 +54,7 @@ class _AuthPageState extends State<AuthPage> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Button.filled(
+            /* Button.filled(
               onPressed: () {
                 showModalBottomSheet(
                   context: context,
@@ -69,20 +69,23 @@ class _AuthPageState extends State<AuthPage> {
                 );
               },
               label: 'CIVITAS AKADEMIK',
-            ),
+            ), */
             const SizedBox(height: 8.0),
-            Button.outlined(
+            Button.filled(
               onPressed: () {
                 showModalBottomSheet(
                   context: context,
                   useSafeArea: true,
                   isScrollControlled: true,
                   builder: (BuildContext context) {
-                    return const LoginBottomSheet();
+                    return BlocProvider(
+                      create: (context) => LoginBloc(),
+                      child: const LoginBottomSheet(),
+                    );
                   },
                 );
               },
-              label: 'MAHASISWA',
+              label: 'LOGIN',
             ),
             const SizedBox(height: 32.0),
             const Text.rich(

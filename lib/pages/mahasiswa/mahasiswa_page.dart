@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/setting_page.dart';
+import 'package:flutter_taufiqb_siakad_app/pages/profile/profile_page.dart';
 
 import '../../common/constants/colors.dart';
 import '../../common/constants/icons.dart';
@@ -20,7 +21,9 @@ class _MahasiswaPageState extends State<MahasiswaPage> {
     Center(
       child: Text('Schedule'),
     ),
-    SettingPage()
+    ProfilePage(
+      role: 'mahasiswa',
+    )
 
     /*   const DashboardPage(),
     const SchedulesPage(),

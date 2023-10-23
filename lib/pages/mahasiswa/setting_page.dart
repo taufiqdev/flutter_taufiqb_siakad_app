@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_taufiqb_siakad_app/bloc/logout/logout_bloc.dart';
+import 'package:flutter_taufiqb_siakad_app/data/datasources/auth_local_datasource.dart';
 import 'package:flutter_taufiqb_siakad_app/pages/auth/auth_page.dart';
 
 class SettingPage extends StatefulWidget {
@@ -21,9 +22,10 @@ class _SettingPageState extends State<SettingPage> {
           state.maybeWhen(
               orElse: () {},
               loaded: () {
+                AuthLocalDatasource().remoteAuthData();
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) {
-                  return AuthPage();
+                  return const AuthPage();
                 }));
               },
               error: () {
