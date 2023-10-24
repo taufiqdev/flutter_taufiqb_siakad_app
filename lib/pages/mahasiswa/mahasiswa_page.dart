@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/jadwal_matkul_page.dart';
 import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/setting_page.dart';
 import 'package:flutter_taufiqb_siakad_app/pages/profile/profile_page.dart';
 
@@ -18,9 +19,7 @@ class _MahasiswaPageState extends State<MahasiswaPage> {
 
   final List<Widget> _pages = [
     const DashboardPage(),
-    Center(
-      child: Text('Schedule'),
-    ),
+    JadwalMatkulPage(),
     ProfilePage(
       role: 'mahasiswa',
     )
