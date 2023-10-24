@@ -1,3 +1,3 @@
 class Variables {
-  static String baseUrl = 'https://78b0-202-51-122-252.ngrok-free.app';
+  static String baseUrl = 'https://d922-180-253-164-173.ngrok-free.app';
 }
