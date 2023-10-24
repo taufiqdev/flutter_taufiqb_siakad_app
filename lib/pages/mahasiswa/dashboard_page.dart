@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/jadwal_matkul_page.dart';
 import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/khs_page.dart';
 import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/nilai_mk_page.dart';
 
@@ -70,7 +71,12 @@ class _DashboardPageState extends State<DashboardPage> {
         MenuCard(
           label: 'Jadwal\nMata Kuliah',
           backgroundColor: const Color(0xffFF68F0),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const JadwalMatkulPage()));
+          },
           imagePath: Images.jadwal,
         ),
       ],
