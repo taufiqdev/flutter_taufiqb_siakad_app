@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'schedules_bloc.dart';
+part of 'khs_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,58 +15,57 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$SchedulesEvent {
+mixin _$KhsEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getSchedules,
+    required TResult Function() getKhs,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getSchedules,
+    TResult? Function()? getKhs,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getSchedules,
+    TResult Function()? getKhs,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_GetSchedules value) getSchedules,
+    required TResult Function(_GetKhs value) getKhs,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_GetSchedules value)? getSchedules,
+    TResult? Function(_GetKhs value)? getKhs,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_GetSchedules value)? getSchedules,
+    TResult Function(_GetKhs value)? getKhs,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SchedulesEventCopyWith<$Res> {
-  factory $SchedulesEventCopyWith(
-          SchedulesEvent value, $Res Function(SchedulesEvent) then) =
-      _$SchedulesEventCopyWithImpl<$Res, SchedulesEvent>;
+abstract class $KhsEventCopyWith<$Res> {
+  factory $KhsEventCopyWith(KhsEvent value, $Res Function(KhsEvent) then) =
+      _$KhsEventCopyWithImpl<$Res, KhsEvent>;
 }
 
 /// @nodoc
-class _$SchedulesEventCopyWithImpl<$Res, $Val extends SchedulesEvent>
-    implements $SchedulesEventCopyWith<$Res> {
-  _$SchedulesEventCopyWithImpl(this._value, this._then);
+class _$KhsEventCopyWithImpl<$Res, $Val extends KhsEvent>
+    implements $KhsEventCopyWith<$Res> {
+  _$KhsEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -83,7 +82,7 @@ abstract class _$$StartedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StartedImplCopyWithImpl<$Res>
-    extends _$SchedulesEventCopyWithImpl<$Res, _$StartedImpl>
+    extends _$KhsEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
@@ -97,7 +96,7 @@ class _$StartedImpl implements _Started {
 
   @override
   String toString() {
-    return 'SchedulesEvent.started()';
+    return 'KhsEvent.started()';
   }
 
   @override
@@ -113,7 +112,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getSchedules,
+    required TResult Function() getKhs,
   }) {
     return started();
   }
@@ -122,7 +121,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getSchedules,
+    TResult? Function()? getKhs,
   }) {
     return started?.call();
   }
@@ -131,7 +130,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getSchedules,
+    TResult Function()? getKhs,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -144,7 +143,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_GetSchedules value) getSchedules,
+    required TResult Function(_GetKhs value) getKhs,
   }) {
     return started(this);
   }
@@ -153,7 +152,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_GetSchedules value)? getSchedules,
+    TResult? Function(_GetKhs value)? getKhs,
   }) {
     return started?.call(this);
   }
@@ -162,7 +161,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_GetSchedules value)? getSchedules,
+    TResult Function(_GetKhs value)? getKhs,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -172,40 +171,40 @@ class _$StartedImpl implements _Started {
   }
 }
 
-abstract class _Started implements SchedulesEvent {
+abstract class _Started implements KhsEvent {
   const factory _Started() = _$StartedImpl;
 }
 
 /// @nodoc
-abstract class _$$GetSchedulesImplCopyWith<$Res> {
-  factory _$$GetSchedulesImplCopyWith(
-          _$GetSchedulesImpl value, $Res Function(_$GetSchedulesImpl) then) =
-      __$$GetSchedulesImplCopyWithImpl<$Res>;
+abstract class _$$GetKhsImplCopyWith<$Res> {
+  factory _$$GetKhsImplCopyWith(
+          _$GetKhsImpl value, $Res Function(_$GetKhsImpl) then) =
+      __$$GetKhsImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetSchedulesImplCopyWithImpl<$Res>
-    extends _$SchedulesEventCopyWithImpl<$Res, _$GetSchedulesImpl>
-    implements _$$GetSchedulesImplCopyWith<$Res> {
-  __$$GetSchedulesImplCopyWithImpl(
-      _$GetSchedulesImpl _value, $Res Function(_$GetSchedulesImpl) _then)
+class __$$GetKhsImplCopyWithImpl<$Res>
+    extends _$KhsEventCopyWithImpl<$Res, _$GetKhsImpl>
+    implements _$$GetKhsImplCopyWith<$Res> {
+  __$$GetKhsImplCopyWithImpl(
+      _$GetKhsImpl _value, $Res Function(_$GetKhsImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GetSchedulesImpl implements _GetSchedules {
-  const _$GetSchedulesImpl();
+class _$GetKhsImpl implements _GetKhs {
+  const _$GetKhsImpl();
 
   @override
   String toString() {
-    return 'SchedulesEvent.getSchedules()';
+    return 'KhsEvent.getKhs()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetSchedulesImpl);
+        (other.runtimeType == runtimeType && other is _$GetKhsImpl);
   }
 
   @override
@@ -215,29 +214,29 @@ class _$GetSchedulesImpl implements _GetSchedules {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getSchedules,
+    required TResult Function() getKhs,
   }) {
-    return getSchedules();
+    return getKhs();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getSchedules,
+    TResult? Function()? getKhs,
   }) {
-    return getSchedules?.call();
+    return getKhs?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getSchedules,
+    TResult Function()? getKhs,
     required TResult orElse(),
   }) {
-    if (getSchedules != null) {
-      return getSchedules();
+    if (getKhs != null) {
+      return getKhs();
     }
     return orElse();
   }
@@ -246,45 +245,45 @@ class _$GetSchedulesImpl implements _GetSchedules {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_GetSchedules value) getSchedules,
+    required TResult Function(_GetKhs value) getKhs,
   }) {
-    return getSchedules(this);
+    return getKhs(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_GetSchedules value)? getSchedules,
+    TResult? Function(_GetKhs value)? getKhs,
   }) {
-    return getSchedules?.call(this);
+    return getKhs?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_GetSchedules value)? getSchedules,
+    TResult Function(_GetKhs value)? getKhs,
     required TResult orElse(),
   }) {
-    if (getSchedules != null) {
-      return getSchedules(this);
+    if (getKhs != null) {
+      return getKhs(this);
     }
     return orElse();
   }
 }
 
-abstract class _GetSchedules implements SchedulesEvent {
-  const factory _GetSchedules() = _$GetSchedulesImpl;
+abstract class _GetKhs implements KhsEvent {
+  const factory _GetKhs() = _$GetKhsImpl;
 }
 
 /// @nodoc
-mixin _$SchedulesState {
+mixin _$KhsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Schedule> schedules) loaded,
+    required TResult Function(List<Khs> khs) loaded,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -292,7 +291,7 @@ mixin _$SchedulesState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Schedule> schedules)? loaded,
+    TResult? Function(List<Khs> khs)? loaded,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -300,7 +299,7 @@ mixin _$SchedulesState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Schedule> schedules)? loaded,
+    TResult Function(List<Khs> khs)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -333,16 +332,15 @@ mixin _$SchedulesState {
 }
 
 /// @nodoc
-abstract class $SchedulesStateCopyWith<$Res> {
-  factory $SchedulesStateCopyWith(
-          SchedulesState value, $Res Function(SchedulesState) then) =
-      _$SchedulesStateCopyWithImpl<$Res, SchedulesState>;
+abstract class $KhsStateCopyWith<$Res> {
+  factory $KhsStateCopyWith(KhsState value, $Res Function(KhsState) then) =
+      _$KhsStateCopyWithImpl<$Res, KhsState>;
 }
 
 /// @nodoc
-class _$SchedulesStateCopyWithImpl<$Res, $Val extends SchedulesState>
-    implements $SchedulesStateCopyWith<$Res> {
-  _$SchedulesStateCopyWithImpl(this._value, this._then);
+class _$KhsStateCopyWithImpl<$Res, $Val extends KhsState>
+    implements $KhsStateCopyWith<$Res> {
+  _$KhsStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -359,7 +357,7 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$SchedulesStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$KhsStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
@@ -373,7 +371,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'SchedulesState.initial()';
+    return 'KhsState.initial()';
   }
 
   @override
@@ -390,7 +388,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Schedule> schedules) loaded,
+    required TResult Function(List<Khs> khs) loaded,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -401,7 +399,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Schedule> schedules)? loaded,
+    TResult? Function(List<Khs> khs)? loaded,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -412,7 +410,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Schedule> schedules)? loaded,
+    TResult Function(List<Khs> khs)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -460,7 +458,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements SchedulesState {
+abstract class _Initial implements KhsState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -473,7 +471,7 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$SchedulesStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$KhsStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
@@ -487,7 +485,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'SchedulesState.loading()';
+    return 'KhsState.loading()';
   }
 
   @override
@@ -504,7 +502,7 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Schedule> schedules) loaded,
+    required TResult Function(List<Khs> khs) loaded,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -515,7 +513,7 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Schedule> schedules)? loaded,
+    TResult? Function(List<Khs> khs)? loaded,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -526,7 +524,7 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Schedule> schedules)? loaded,
+    TResult Function(List<Khs> khs)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -574,7 +572,7 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements SchedulesState {
+abstract class _Loading implements KhsState {
   const factory _Loading() = _$LoadingImpl;
 }
 
@@ -584,12 +582,12 @@ abstract class _$$LoadedImplCopyWith<$Res> {
           _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
       __$$LoadedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<Schedule> schedules});
+  $Res call({List<Khs> khs});
 }
 
 /// @nodoc
 class __$$LoadedImplCopyWithImpl<$Res>
-    extends _$SchedulesStateCopyWithImpl<$Res, _$LoadedImpl>
+    extends _$KhsStateCopyWithImpl<$Res, _$LoadedImpl>
     implements _$$LoadedImplCopyWith<$Res> {
   __$$LoadedImplCopyWithImpl(
       _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
@@ -598,13 +596,13 @@ class __$$LoadedImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? schedules = null,
+    Object? khs = null,
   }) {
     return _then(_$LoadedImpl(
-      null == schedules
-          ? _value._schedules
-          : schedules // ignore: cast_nullable_to_non_nullable
-              as List<Schedule>,
+      null == khs
+          ? _value._khs
+          : khs // ignore: cast_nullable_to_non_nullable
+              as List<Khs>,
     ));
   }
 }
@@ -612,19 +610,19 @@ class __$$LoadedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoadedImpl implements _Loaded {
-  const _$LoadedImpl(final List<Schedule> schedules) : _schedules = schedules;
+  const _$LoadedImpl(final List<Khs> khs) : _khs = khs;
 
-  final List<Schedule> _schedules;
+  final List<Khs> _khs;
   @override
-  List<Schedule> get schedules {
-    if (_schedules is EqualUnmodifiableListView) return _schedules;
+  List<Khs> get khs {
+    if (_khs is EqualUnmodifiableListView) return _khs;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_schedules);
+    return EqualUnmodifiableListView(_khs);
   }
 
   @override
   String toString() {
-    return 'SchedulesState.loaded(schedules: $schedules)';
+    return 'KhsState.loaded(khs: $khs)';
   }
 
   @override
@@ -632,13 +630,12 @@ class _$LoadedImpl implements _Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadedImpl &&
-            const DeepCollectionEquality()
-                .equals(other._schedules, _schedules));
+            const DeepCollectionEquality().equals(other._khs, _khs));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_schedules));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_khs));
 
   @JsonKey(ignore: true)
   @override
@@ -651,10 +648,10 @@ class _$LoadedImpl implements _Loaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Schedule> schedules) loaded,
+    required TResult Function(List<Khs> khs) loaded,
     required TResult Function(String message) error,
   }) {
-    return loaded(schedules);
+    return loaded(khs);
   }
 
   @override
@@ -662,10 +659,10 @@ class _$LoadedImpl implements _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Schedule> schedules)? loaded,
+    TResult? Function(List<Khs> khs)? loaded,
     TResult? Function(String message)? error,
   }) {
-    return loaded?.call(schedules);
+    return loaded?.call(khs);
   }
 
   @override
@@ -673,12 +670,12 @@ class _$LoadedImpl implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Schedule> schedules)? loaded,
+    TResult Function(List<Khs> khs)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(schedules);
+      return loaded(khs);
     }
     return orElse();
   }
@@ -721,10 +718,10 @@ class _$LoadedImpl implements _Loaded {
   }
 }
 
-abstract class _Loaded implements SchedulesState {
-  const factory _Loaded(final List<Schedule> schedules) = _$LoadedImpl;
+abstract class _Loaded implements KhsState {
+  const factory _Loaded(final List<Khs> khs) = _$LoadedImpl;
 
-  List<Schedule> get schedules;
+  List<Khs> get khs;
   @JsonKey(ignore: true)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -741,7 +738,7 @@ abstract class _$$ErrorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$SchedulesStateCopyWithImpl<$Res, _$ErrorImpl>
+    extends _$KhsStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
   __$$ErrorImplCopyWithImpl(
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
@@ -771,7 +768,7 @@ class _$ErrorImpl implements _Error {
 
   @override
   String toString() {
-    return 'SchedulesState.error(message: $message)';
+    return 'KhsState.error(message: $message)';
   }
 
   @override
@@ -796,7 +793,7 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Schedule> schedules) loaded,
+    required TResult Function(List<Khs> khs) loaded,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -807,7 +804,7 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Schedule> schedules)? loaded,
+    TResult? Function(List<Khs> khs)? loaded,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -818,7 +815,7 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Schedule> schedules)? loaded,
+    TResult Function(List<Khs> khs)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -866,7 +863,7 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements SchedulesState {
+abstract class _Error implements KhsState {
   const factory _Error(final String message) = _$ErrorImpl;
 
   String get message;

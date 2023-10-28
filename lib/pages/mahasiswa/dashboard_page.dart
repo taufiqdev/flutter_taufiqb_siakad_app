@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/absensi_page.dart';
 import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/jadwal_matkul_page.dart';
 import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/khs_page.dart';
 import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/nilai_mk_page.dart';
@@ -34,12 +35,28 @@ class _DashboardPageState extends State<DashboardPage> {
                 color: ColorName.primary,
               ),
             ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.notifications,
-                color: ColorName.primary,
-              ),
+            Row(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AbsensiPage()));
+                  },
+                  icon: const Icon(
+                    Icons.qr_code_scanner,
+                    color: ColorName.primary,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.notifications,
+                    color: ColorName.primary,
+                  ),
+                ),
+              ],
             ),
           ],
         ),

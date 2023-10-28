@@ -67,7 +67,7 @@ class _JadwalMatkulPageState extends State<JadwalMatkulPage> {
               ),
             ),
             const SizedBox(height: 18.0),
-            /* Expanded(
+            Expanded(
               child: BlocBuilder<SchedulesBloc, SchedulesState>(
                 builder: (context, state) {
                   return state.maybeWhen(
@@ -98,7 +98,7 @@ class _JadwalMatkulPageState extends State<JadwalMatkulPage> {
                   );
                 },
               ),
-            ), */
+            ),
           ],
         ),
       ),

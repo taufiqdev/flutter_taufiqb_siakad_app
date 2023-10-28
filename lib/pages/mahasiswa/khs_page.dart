@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_taufiqb_siakad_app/bloc/khs/khs_bloc.dart';
 
 import '../../common/components/custom_scaffold.dart';
 import '../../common/components/row_text.dart';
@@ -14,12 +16,22 @@ class KhsPage extends StatefulWidget {
 
 class _KhsPageState extends State<KhsPage> {
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    context.read<KhsBloc>().add(KhsEvent.getKhs());
+  }
+
+  double ipk = 0;
+
+  @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
-      body: ListView(
-        padding: const EdgeInsets.all(24.0),
+    //return CustomScaffold(
+    return Scaffold(
+      body: Column(
+        /* padding: const EdgeInsets.all(24.0),
         shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(), */
         children: [
           const Text(
             "KHS Mahasiswa",
@@ -80,11 +92,49 @@ class _KhsPageState extends State<KhsPage> {
             valueColor: ColorName.primary,
           ),
           const SizedBox(height: 14.0),
-          const RowText(
-            label: 'Basis Data',
-            value: 'C',
+          BlocBuilder<KhsBloc, KhsState>(
+            builder: (context, state) {
+              return state.maybeWhen(orElse: () {
+                return const SizedBox();
+              }, loading: () {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }, loaded: (data) {
+                int total = 0;
+                data.forEach((element) {
+                  total += int.parse(element.nilai);
+                });
+                ipk = total / data.length;
+                return Column(
+                  children: [
+                    Expanded(
+                      child: ListView.builder(
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 6),
+                            child: RowText(
+                              label: data[index].subject.title,
+                              value: data[index].grade.toString(),
+                            ),
+                          );
+                        },
+                        itemCount: data.length,
+                      ),
+                    ),
+                    const SizedBox(height: 40.0),
+                    RowText(
+                      label: 'IPK Semester :',
+                      value: ipk.toString(),
+                      labelColor: ColorName.primary,
+                      valueColor: ColorName.primary,
+                    ),
+                  ],
+                );
+              });
+            },
           ),
-          const SizedBox(height: 12.0),
+          /* const SizedBox(height: 12.0),
           const RowText(
             label: 'Struktur Data',
             value: 'A',
@@ -104,13 +154,8 @@ class _KhsPageState extends State<KhsPage> {
             label: 'Keterangan',
             value: 'A',
           ),
-          const SizedBox(height: 40.0),
-          const RowText(
-            label: 'IPK Semester :',
-            value: '3.18',
-            labelColor: ColorName.primary,
-            valueColor: ColorName.primary,
-          ),
+          
+          */
           SizedBox(height: MediaQuery.of(context).size.height / 3),
         ],
       ),

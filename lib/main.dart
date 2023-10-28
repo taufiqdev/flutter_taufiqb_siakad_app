@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_taufiqb_siakad_app/bloc/schedules/schedules_bloc.dart';
 import 'package:flutter_taufiqb_siakad_app/data/datasources/auth_local_datasource.dart';
 import 'package:flutter_taufiqb_siakad_app/pages/auth/splash_page.dart';
 import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/mahasiswa_page.dart';
 
+import 'bloc/khs/khs_bloc.dart';
 import 'bloc/login/login_bloc.dart';
 
 void main() {
@@ -15,22 +17,35 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => KhsBloc(),
+        ),
+        BlocProvider(
+          create: (context) => SchedulesBloc(),
+        ),
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: FutureBuilder<bool>(
+            future: AuthLocalDatasource().isLogin(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData && snapshot.data!) {
+                //final user= await AuthLocalDatasource().getUser();
+                return BlocProvider(
+                  create: (context) => KhsBloc(),
+                  child: MahasiswaPage(),
+                );
+              } else {
+                return SplashPage();
+              }
+            }),
       ),
-      home: FutureBuilder<bool>(
-          future: AuthLocalDatasource().isLogin(),
-          builder: (context, snapshot) {
-            if (snapshot.hasData && snapshot.data!) {
-              //final user= await AuthLocalDatasource().getUser();
-              return MahasiswaPage();
-            } else {
-              return SplashPage();
-            }
-          }),
     );
   }
 }
