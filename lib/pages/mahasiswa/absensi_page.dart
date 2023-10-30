@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dash/flutter_dash.dart';
+import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/widgets/qrcode_page.dart';
 
 import '../../common/components/buttons.dart';
 import '../../common/components/custom_scaffold.dart';
@@ -142,12 +143,12 @@ class _AbsensiPageState extends State<AbsensiPage> {
           const SizedBox(height: 20.0),
           Button.filled(
             onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => const ScanPage(),
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const QrCodePage(),
+                ),
+              );
             },
             label: 'SCAN',
             icon: const ImageIcon(
