@@ -7,6 +7,7 @@ import 'package:flutter_taufiqb_siakad_app/pages/mahasiswa/mahasiswa_page.dart';
 
 import 'bloc/khs/khs_bloc.dart';
 import 'bloc/login/login_bloc.dart';
+import 'bloc/qrcode/qrcode_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +25,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => SchedulesBloc(),
+        ),
+        BlocProvider(
+          create: (context) => QrcodeBloc(),
         ),
       ],
       child: MaterialApp(
